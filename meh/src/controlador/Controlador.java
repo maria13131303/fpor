@@ -27,12 +27,20 @@ public  class Controlador implements ActionListener {
 	public  Estudiante agregarEstudiante(String nombre,int edad , String codigo,String programa,
 			String telefono,String correo,String nivelAcademico,int materias) throws NumberFormatException , NullPointerException{
 
-		Estudiante est=new Estudiante(nombre, edad, codigo, programa, telefono, correo, nivelAcademico, materias, promedio);
-		estu.add(est);	
-
-		v.getPa().getEs().setText(nombre);
+		try {
+			Estudiante est=new Estudiante(nombre, edad, codigo, programa, telefono, correo, nivelAcademico, materias, promedio);
+			estu.add(est);
+		} 
+		catch(	NumberFormatException e) {
+			JOptionPane.showMessageDialog(null, "Error", "ERROR", JOptionPane.DEFAULT_OPTION);		
+		}
+		catch(NullPointerException ex) {
+			System.out.print("Caught the NullPointerException");
+		}
 		return est;
+
 	}
+
 
 	public Estudiante buscarEstudiante(String codigo) {
 
@@ -149,21 +157,6 @@ public  class Controlador implements ActionListener {
 			mo.setVisible(false);
 		}
 
-
-	}
-	
-	public void agregarEstudiante2(String nombre,int edad , String codigo,String programa,
-			String telefono,String correo,String nivelAcademico,int materias) {
-		try {
-			agregarEstudiante(null, 0, null, null, null, null, null, 0);
-
-		} 
-		catch(	NumberFormatException e) {
-			JOptionPane.showMessageDialog(null, "Error", "ERROR", JOptionPane.DEFAULT_OPTION);		
-		}
-		catch(NullPointerException ex) {
-			System.out.print("Caught the NullPointerException");
-		}
 
 	}
 
