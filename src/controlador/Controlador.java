@@ -6,7 +6,6 @@ import java.util.ArrayList;
 import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
 
-import modelo.Directorio;
 import modelo.Estudiante;
 import vista.Agregar;
 import vista.Modificar;
@@ -14,7 +13,6 @@ import vista.Ventana;
 
 public  class Controlador implements ActionListener {
 	private Estudiante est;
-	private Directorio dir;
 	private double promedio;
 	private Ventana v;
 	private Agregar ag;
@@ -33,7 +31,7 @@ public  class Controlador implements ActionListener {
 
 		Estudiante est=new Estudiante(nombre, edad, codigo, programa, telefono, correo, nivelAcademico, materias, promedio);
 		estu.add(est);	
-		
+
 		v.getPa().getEs().setText(nombre);
 		return est;
 	}
@@ -123,24 +121,39 @@ public  class Controlador implements ActionListener {
 		} 
 		else if(accion == "AceptarA") {
 
+			String uno = ag.getU().getText();
+			int dos =Integer.parseInt(ag.getD().getText());
+			String tres = ag.getT().getText(); 
+			String cuatro = ag.getC().getText();
+			String cinco = ag.getCi().getText();
+			String seis = ag.getS().getText();
+			String siete = ag.getSi().getText();
+			int ocho =Integer.parseInt(ag.getO().getText());
+
 			System.out.println("a");
-			agregarEstudiante(ag.getU().getText(), Integer.parseInt(ag.getD().getText()),ag.getT().getText(), ag.getC().getText(), ag.getCi().getText(), ag.getS().getText(),ag.getSi().getText(),Integer.parseInt(ag.getO().getText()));
+			agregarEstudiante(uno,dos,tres,cuatro,cinco,seis,siete,ocho);
 			System.out.println("b");
 			ag.setVisible(false);
 
 
 		}
 		else if(accion == "AceptarM") {
+			String tresm= ag.getT().getText(); 
+			String cuatrom = ag.getC().getText();
+			String cincom = ag.getCi().getText();
+			String seism = ag.getS().getText();
+			String sietem = ag.getSi().getText();
+			int ochom =Integer.parseInt(ag.getO().getText());
 
 			System.out.println("a");
-			modificarEstudiante(mo.getT().getText(), mo.getC().getText(), mo.getCi().getText(), mo.getS().getText(),Integer.parseInt(mo.getO().getText()));
+			modificarEstudiante(tresm,cuatrom,cincom,seism,ochom);
 			System.out.println("b");
 			mo.setVisible(false);
 		}
-			
-			
-	}
 
+
+	}
+	
 	public void agregarEstudiante2(String nombre,int edad , String codigo,String programa,
 			String telefono,String correo,String nivelAcademico,int materias) {
 		try {
@@ -173,7 +186,7 @@ public  class Controlador implements ActionListener {
 
 		try { 
 			elminarEstudiante(codigo);
-			
+
 		}
 		catch(NullPointerException ex) {
 			System.out.print("Caught the NullPointerException");
@@ -183,4 +196,3 @@ public  class Controlador implements ActionListener {
 
 }
 
-	

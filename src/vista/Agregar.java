@@ -27,61 +27,54 @@ public class Agregar extends JFrame implements  ActionListener {
 		setLayout(new GridLayout(9,2));
 		getAg();
 		texto();
-		
+
 		aceptar.setActionCommand("AceptarA");
 		aceptar.addActionListener(co);
 
 	}
 	public void texto() {
-		
+
 		nombre= new JLabel("nombre");
 		add(nombre);
-		
 		u = new TextField("xx",20);
 		add(u);
-		
+
+
 		edad= new JLabel("edad");
 		add(edad);
-		
 		d = new TextField("xx",20);
 		add(d);
-		
+
 		codigo= new JLabel("codigo");
 		add(codigo);
-		
 		t= new TextField("xx",20);
 		add(t);
-		
+
 		programa= new JLabel("programa");
 		add(programa);
-		
 		c = new TextField("xx",20);
 		add(c);
-		
+
 		telefono= new JLabel("telefono");
 		add(telefono);
-		
 		ci = new TextField("xx",20);
 		add(ci);
-		
+
 		correo= new JLabel("correo");
 		add(correo);
-		
 		s = new TextField("xx",20);
 		add(s);
-		
+
 		promedio= new JLabel("promedio");
 		add(promedio);
-		
 		si = new TextField("xx",20);
 		add(si);
 		
 		materias= new JLabel("materias");
 		add(materias);
-		
 		o = new TextField("xx",20);
 		add(o);
-		
+
 		aceptar = new JButton("Aceptar");
 		add(aceptar);
 
@@ -146,10 +139,10 @@ public class Agregar extends JFrame implements  ActionListener {
 	}
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		
-		
-		}
-		
-		
+
+
 	}
+
+
+}
 
