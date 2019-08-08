@@ -22,13 +22,13 @@ public  class Controlador implements ActionListener {
 		ag = new Agregar(this);
 		mo = new Modificar (this);
 		ArrayList<Estudiante> estu = new ArrayList<Estudiante>();
-
+				
+	
 	}
 	public  Estudiante agregarEstudiante(String nombre,int edad , String codigo,String programa,
 			String telefono,String correo,String nivelAcademico,int materias) throws NumberFormatException , NullPointerException{
-
 		try {
-			Estudiante est=new Estudiante(nombre, edad, codigo, programa, telefono, correo, nivelAcademico, materias, promedio);
+			 est=new Estudiante(nombre, edad, codigo, programa, telefono, correo, nivelAcademico, materias, promedio);
 			estu.add(est);
 		} 
 		catch(	NumberFormatException e) {
@@ -156,10 +156,7 @@ public  class Controlador implements ActionListener {
 			System.out.println("b");
 			mo.setVisible(false);
 		}
-
-
 	}
-
 	public void modificarEstudiante2( String ptelefono,String pcorreo,String pnivelAcademico,int pmaterias) {
 		try {
 			modificarEstudiante( ptelefono, pcorreo, pnivelAcademico, pnivelAcademico, pmaterias);
