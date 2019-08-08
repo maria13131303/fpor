@@ -26,6 +26,8 @@ public class Modificar  extends JFrame{
 		setSize(300, 300);
 		setTitle("Modificar");
 		setLayout(new GridLayout(9,2));
+		aceptarm = new JButton("Aceptar");
+		add(aceptarm);
 		aceptarm.setActionCommand("AceptarM");
 		aceptarm.addActionListener(co);
 
@@ -74,8 +76,7 @@ public class Modificar  extends JFrame{
 		add(materias);
 		o = new TextField("xx",20);
 		add(o);
-		aceptarm = new JButton("Aceptar");
-		add(aceptarm);
+	
 
 
 	}
